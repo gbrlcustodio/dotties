@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sh ~/.screenlayout/home-office.sh
+nitrogen --restore
