@@ -117,8 +117,6 @@ alias hackerspace="cd $HOME/Hackerspace"
 # System wide environment variables
 export BASHRC_SOURCE=$HOME/.bashrc
 export BASH_HISTORY_SOURCE=$HOME/.bash_history
-export NPM_TOKEN="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"
-export BIT_TOKEN="dcd8bd7d-35fb-4774-8433-737984a93403"
 export DOCKERHOST=$(ip -4 addr show docker0 | grep -Po 'inet \K[\d.]+')
 export PATH=$PATH:$HOME/bin
 export VISUAL=nvim
