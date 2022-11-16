@@ -130,10 +130,7 @@ export USER_ID=$(id -u)
 # Pipefy's context management tool
 . $HOME/.ctx/ctx.sh
 
-# SSH agent evaluation
-# if [ -n "$DESKTOP_SESSION" ];then
-#     eval $(gnome-keyring-daemon --start)
-#     export SSH_AUTH_SOCK
-# fi
+export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 export PATH="${HOME}/.config/lsp/lua-language-server/bin:${PATH}"
+
 alias dotties="git --git-dir=$HOME/.dotties --work-tree=$HOME"
