@@ -18,16 +18,15 @@ launch_bar() {
 	# 	bash "$dir"/pwidgets/launch.sh --main
 	# else
     CONFIG="$dir/$style/config.ini"
+    PRIMARY=$(xrandr --query | grep primary | cut -d" " -f1)
 
     #👇 👉 launching multiple monitors --> make sure to add monitor = ${env:MONITOR:} in the config
-    for m in $(polybar --list-monitors); do
+    for MONITOR in $(polybar --list-monitors | cut -d":" -f1); do
       WIRELESS=$(ls /sys/class/net/ | grep ^wl | awk 'NR==1{print $1}')
-      MONITOR=$(echo $m | cut -d":" -f1)
 
-      case "$m" in
-        *primary*) TRAY_POS=center MONITOR=$MONITOR WIRELESS=$WIRELESS polybar -c $CONFIG --reload main & ;;
-        *        ) MONITOR=$MONITOR WIRELESS=$WIRELESS polybar -c $CONFIG --reload main & ;;
-      esac
+      [[ $PRIMARY == $MONITOR ]] && TRAY_POS=center || TRAY_POS=none
+
+      TRAY_POS=$TRAY_POS MONITOR=$MONITOR WIRELESS=$WIRELESS polybar -c $CONFIG --reload main &
     done		
     #polybar -q main -c "$dir/$style/config.ini" &	
 	#fi
