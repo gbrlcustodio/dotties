@@ -1,8 +1,7 @@
 -- Helper functions
 local keymap = function(mode, alias, cmd, opts)
-  vim.api.nvim_set_keymap(mode, alias, cmd, opts)
+  vim.keymap.set(mode, alias, cmd)
 end
-
 local nmap = function(alias, cmd)
   keymap("n", alias, cmd, {silent = true})
 end
@@ -40,11 +39,17 @@ nnoremap("<S-Tab>", ":bprev<CR>")
 nnoremap("<Leader>c", ":Bdelete<CR>")
 nnoremap("t", ":b#<CR>")
 
--- Window navigation
-nmap("<C-h>", "<C-w>h")
-nmap("<C-j>", "<C-w>j")
-nmap("<C-k>", "<C-w>k")
-nmap("<C-l>", "<C-w>l")
+-- Resizing splits
+nmap("<A-h>", require("smart-splits").resize_left)
+nmap("<A-j>", require("smart-splits").resize_down)
+nmap("<A-k>", require("smart-splits").resize_up)
+nmap("<A-l>", require("smart-splits").resize_right)
+
+-- Moving between splits
+nmap("<C-h>", require("smart-splits").move_cursor_left)
+nmap("<C-j>", require("smart-splits").move_cursor_down)
+nmap("<C-k>", require("smart-splits").move_cursor_up)
+nmap("<C-l>", require("smart-splits").move_cursor_right)
 
 -- Copy and pasting
 nnoremap("cp", ':let @+= expand("%")<CR>')

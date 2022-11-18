@@ -59,6 +59,7 @@ return require("packer").startup(
 
     -- Window managemend
     use "famiu/bufdelete.nvim"
+    use "mrjones2014/smart-splits.nvim"
 
     -- Themes
     use "rmehri01/onenord.nvim"
