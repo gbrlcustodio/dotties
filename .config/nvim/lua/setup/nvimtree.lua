@@ -16,7 +16,7 @@ local config = {
   },
   filters = {
     dotfiles = false,
-    custom = {".git", "node_modules", ".cache"}
+    custom = {"^\\.git$", "^\\.cache$"}
   },
   disable_netrw = true,
   hijack_netrw = true,
