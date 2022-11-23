@@ -27,7 +27,7 @@ return require("packer").startup(
       requires = "neovim/nvim-lspconfig"
     }
 
-    -- Tree sintting
+    -- Treesitter
     use {
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate"
@@ -80,5 +80,8 @@ return require("packer").startup(
 
     -- Enhanced keyboard mappings
     use "max397574/better-escape.nvim"
+
+    -- Smart comments
+    use "numToStr/Comment.nvim"
   end
 )
