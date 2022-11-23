@@ -74,6 +74,7 @@ return require("packer").startup(
 
     -- Text formatting
     use "mhartington/formatter.nvim"
+    use "echasnovski/mini.trailspace"
 
     -- Built-in terminal emulator
     use {"akinsho/toggleterm.nvim", tag = "*"}
