@@ -115,8 +115,10 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/cmp-path"
   },
   ["dashboard-nvim"] = {
-    loaded = true,
-    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
   ["diffview.nvim"] = {
@@ -133,6 +135,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
   },
   ["impatient.nvim"] = {
     loaded = true,
@@ -158,11 +165,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["mini.trailspace"] = {
-    loaded = true,
-    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/mini.trailspace",
-    url = "https://github.com/echasnovski/mini.trailspace"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -214,6 +216,11 @@ _G.packer_plugins = {
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/smart-splits.nvim",
     url = "https://github.com/mrjones2014/smart-splits.nvim"
   },
+  ["spaceless.nvim"] = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/spaceless.nvim",
+    url = "https://github.com/lewis6991/spaceless.nvim"
+  },
   ["symbols-outline.nvim"] = {
     loaded = true,
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
@@ -237,6 +244,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'dashboard-nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

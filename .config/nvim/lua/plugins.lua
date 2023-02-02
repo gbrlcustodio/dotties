@@ -45,10 +45,16 @@ return require("packer").startup(
 
     -- UI
     use "lukas-reineke/indent-blankline.nvim"
-    use "glepnir/dashboard-nvim"
     use "nvim-tree/nvim-web-devicons"
     use {"akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons"}
     use "simrat39/symbols-outline.nvim"
+    use "ellisonleao/glow.nvim"
+
+    use {
+      'glepnir/dashboard-nvim',
+      event = 'VimEnter',
+      requires = {'nvim-tree/nvim-web-devicons'}
+    }
 
     use {
       "nvim-tree/nvim-tree.lua",
@@ -74,7 +80,7 @@ return require("packer").startup(
 
     -- Text formatting
     use "mhartington/formatter.nvim"
-    use "echasnovski/mini.trailspace"
+    use "lewis6991/spaceless.nvim"
 
     -- Built-in terminal emulator
     use {"akinsho/toggleterm.nvim", tag = "*"}
