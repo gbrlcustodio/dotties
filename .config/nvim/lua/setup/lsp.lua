@@ -1,5 +1,5 @@
 -- Setup lspconfig.
-require "lspconfig".sumneko_lua.setup {
+require "lspconfig".lua_lsp.setup {
   settings = {
     Lua = {
       runtime = {

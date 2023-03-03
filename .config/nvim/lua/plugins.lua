@@ -63,6 +63,11 @@ return require("packer").startup(
       }
     }
 
+    use {
+      "folke/trouble.nvim",
+      requires = "nvim-tree/nvim-web-devicons"
+    }
+
     -- Window managemend
     use "famiu/bufdelete.nvim"
     use "mrjones2014/smart-splits.nvim"
