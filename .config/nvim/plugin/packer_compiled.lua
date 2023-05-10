@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  LuaSnip = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["better-escape.nvim"] = {
     loaded = true,
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/better-escape.nvim",
@@ -141,6 +146,11 @@ _G.packer_plugins = {
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/glow.nvim",
     url = "https://github.com/ellisonleao/glow.nvim"
   },
+  ["hologram.nvim"] = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/hologram.nvim",
+    url = "https://github.com/giusgad/hologram.nvim"
+  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -150,6 +160,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -166,10 +181,25 @@ _G.packer_plugins = {
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -206,10 +236,20 @@ _G.packer_plugins = {
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["pets.nvim"] = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/pets.nvim",
+    url = "https://github.com/giusgad/pets.nvim"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["smart-splits.nvim"] = {
     loaded = true,
@@ -220,6 +260,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/spaceless.nvim",
     url = "https://github.com/lewis6991/spaceless.nvim"
+  },
+  ["suda.vim"] = {
+    loaded = true,
+    path = "/home/gabriel.custodio/.local/share/nvim/site/pack/packer/start/suda.vim",
+    url = "https://github.com/lambdalisue/suda.vim"
   },
   ["symbols-outline.nvim"] = {
     loaded = true,
