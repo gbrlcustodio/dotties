@@ -39,13 +39,15 @@ alias dotties='/usr/bin/git --git-dir=$HOME/.dotties.git --work-tree=$HOME'
 
 2. Checkout the dotfiles to your home directory:
 
-> [!CAUTION] Checking out a bare repository may result in some files being overwritten, so back up any important files first.
+> [!CAUTION]
+> Checking out a bare repository may result in some files being overwritten, so back up any important files first.
 
 ```
 dotties checkout
 ```
 
-> [!TIP] Checkout Failed? If you have existing config files (like .gitconfig or .config/nvim), the checkout step will fail to prevent overwriting them. You must back up or delete your existing files, then run dotties checkout again.
+> [!TIP]
+> Checkout Failed? If you have existing config files (like .gitconfig or .config/nvim), the checkout step will fail to prevent overwriting them. You must back up or delete your existing files, then run dotties checkout again.
 
 3. Hide untracked files (prevents 'dotties status' from listing your whole home directory)
 
